@@ -9,13 +9,17 @@ const num = () => Math.floor(Math.random() * 1084 + 1)
 const getImage = () => {
   container.innerHTML = ''
 
+
+  const div = document.createElement('div')
+
   // crea la imagen
   const img = new Image();
   img.crossOrigin = 'Anonymous';
   img.src = `https://picsum.photos/id/${num()}/400`;
   img.classList.add('imagen');
 
-  container.append(img);
+  div.append(img);
+  container.append(div);
 
   // Escucha si la imagen no se carga y obtiene una nueva imagen
   img.addEventListener('error', getImage)

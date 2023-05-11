@@ -12,11 +12,11 @@ body {
   margin: 0 auto;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .box-container {
@@ -24,7 +24,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
   gap: 2rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
   max-width: 90rem;
 }
 
@@ -47,5 +47,18 @@ body {
   width: 80%;
   display: block;
   max-width: 40rem;
+  margin: 0 auto;
 }
 
+@media (min-width: 600px) {
+  #app {
+    /* padding-top: 5rem; */
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .box-container {
+    /* margin-top: 10rem; */
+    margin-top: 0rem;
+  }
+}
